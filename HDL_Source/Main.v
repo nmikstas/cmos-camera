@@ -1,23 +1,23 @@
 `timescale 1ns / 1ps
 
 module Main(
-    input clk,					//Main clock input.
+    input clk,				//Main clock input.
 	 input clk25MHz,
 	 
 	 input btn,
 	 
 	 //Cellular RAM.
-	 output LB,   				//Constantly enable output lower byte.  
-	 output UB,  				//Constantly enable output upper byte.
-	 output OE,					//Output enable.
-	 output WE,					//Write enable.
-	 output ADV,				//Address enable.
-	 output CE,					//Chip enable.
-	 output CRE,				//Control register enable.
-	 output RAM_CLK, 			//Clock.
-	 input  O_WAIT,  			//Wait signal.
+	 output LB,   			//Constantly enable output lower byte.  
+	 output UB,  			//Constantly enable output upper byte.
+	 output OE,				//Output enable.
+	 output WE,				//Write enable.
+	 output ADV,			//Address enable.
+	 output CE,				//Chip enable.
+	 output CRE,			//Control register enable.
+	 output RAM_CLK, 		//Clock.
+	 input  O_WAIT,  		//Wait signal.
     output [22:0]A,			//Address.
-	 inout  [15:0]DQ,			//Data.
+	 inout  [15:0]DQ,		//Data.
 	 
 	 //VGA controller.
 	 output [15:0]vga,

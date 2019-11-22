@@ -187,8 +187,8 @@ module NMPSM3(clk, reset, INSTRUCTION, IN_PORT, IRQ0, IRQ1, IRQ2, IRQ3,
       .CLKB(clk),                   // Port B Clock
       .DIA(dataA[15:8]),            // Port A 16-bit Data Input
       .DIB(dataB[15:8]),            // Port-B 16-bit Data Input
-		.DIPA(1'b0),                  // Port A 1-bit parity Input
-		.DIPB(1'b0),                  // Port B 1-bit parity Input
+		.DIPA(1'b0),                // Port A 1-bit parity Input
+		.DIPB(1'b0),                // Port B 1-bit parity Input
       .ENA(1'b1),                   // Port A RAM Enable Input
       .ENB(1'b1),                   // Port B RAM Enable Input
       .SSRA(1'b0),                  // Port A Synchronous Set/Reset Input
@@ -214,8 +214,8 @@ module NMPSM3(clk, reset, INSTRUCTION, IN_PORT, IRQ0, IRQ1, IRQ2, IRQ3,
       .CLKB(clk),                   // Port B Clock
       .DIA(dataA[7:0]),             // Port A 16-bit Data Input
       .DIB(dataB[7:0]),             // Port-B 16-bit Data Input
-		.DIPA(1'b0),                  // Port A 1-bit parity Input
-		.DIPB(1'b0),                  // Port B 1-bit parity Input
+		.DIPA(1'b0),                // Port A 1-bit parity Input
+		.DIPB(1'b0),                // Port B 1-bit parity Input
       .ENA(1'b1),                   // Port A RAM Enable Input
       .ENB(1'b1),                   // Port B RAM Enable Input
       .SSRA(1'b0),                  // Port A Synchronous Set/Reset Input

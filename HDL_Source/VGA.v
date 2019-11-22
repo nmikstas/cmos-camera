@@ -37,12 +37,12 @@ module VGA(
 		  if(VGARow <= 478 && (!VGAPixel || VGAPixel == 399))
 		      dataInterrupt <= 1'b1;		  
 		  
-		  if(VGAPixel == 799) begin							//Start new line.
+		  if(VGAPixel == 799) begin						//Start new line.
 		      VGAPixel <= 0;
 				VGARow   <= VGARow + 1;
 		  end
 		  
-		  if(VGARow == 524 && VGAPixel == 799) begin		//Start new frame.
+		  if(VGARow == 524 && VGAPixel == 799) begin	//Start new frame.
 		      VGAPixel <= 0;
 				VGARow   <= 0;
 		  end
@@ -52,13 +52,13 @@ module VGA(
 		  else
 		      hsync <= 1;
 				
-		  if(VGAPixel == 799 && VGARow == 489)				//Start VSYNC.
+		  if(VGAPixel == 799 && VGARow == 489)			//Start VSYNC.
 		      vsync <= 1'b0;
 				
-		  if(VGAPixel == 799 && VGARow == 491)				//End VSYNC.
+		  if(VGAPixel == 799 && VGARow == 491)			//End VSYNC.
 		      vsync <= 1'b1;
 	 
-		  if(VGARow < 480 && VGAPixel < 640) 				//Within visible range.
+		  if(VGARow < 480 && VGAPixel < 640) 			//Within visible range.
             VGAAddress <= VGAAddress + 1'b1;  
     end
 	 

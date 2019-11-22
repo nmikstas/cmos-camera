@@ -57,14 +57,14 @@ module I2CTest1(
 	 localparam MASTER_TX_ACK     = 5'h0B;
 	 localparam MASTER_TX_PREP    = 5'h0C;
 	 localparam MASTER_TX_STOP    = 5'h0D;
-	 localparam MASTER_RX_BIT7		= 5'h10;
-	 localparam MASTER_RX_BIT6		= 5'h11;
-	 localparam MASTER_RX_BIT5		= 5'h12;
-	 localparam MASTER_RX_BIT4		= 5'h13;
-	 localparam MASTER_RX_BIT3		= 5'h14;
-	 localparam MASTER_RX_BIT2		= 5'h15;
-	 localparam MASTER_RX_BIT1		= 5'h16;
-	 localparam MASTER_RX_BIT0		= 5'h17;
+	 localparam MASTER_RX_BIT7	  = 5'h10;
+	 localparam MASTER_RX_BIT6	  = 5'h11;
+	 localparam MASTER_RX_BIT5	  = 5'h12;
+	 localparam MASTER_RX_BIT4	  = 5'h13;
+	 localparam MASTER_RX_BIT3	  = 5'h14;
+	 localparam MASTER_RX_BIT2	  = 5'h15;
+	 localparam MASTER_RX_BIT1	  = 5'h16;
+	 localparam MASTER_RX_BIT0	  = 5'h17;
 	 localparam MASTER_RX_ACK     = 5'h18;
 	 
 	 //Start, stop or continue at end of transmission.
@@ -290,8 +290,8 @@ module I2CTest1(
 				end
 				
 				if(master_state == MASTER_TX_PREP && master_next_state == MASTER_TX_START) begin
-				    master_type_work_reg  <= type_buffer;    //Load start/stop bit.
-					 type_buffer           <= 2'b00;          //Clear type buffer.
+				    master_type_work_reg  <= type_buffer;//Load start/stop bit.
+					 type_buffer           <= 2'b00;     //Clear type buffer.
                 master_tx_work_reg    <= data_tx_buffer; //Load data to transmit.
                 data_tx_buffer        <= 8'h00;          //Clear data buffer.
 					 tx_valid_work_reg     <= tx_valid_buffer;//Load tx valid bit.
@@ -300,8 +300,8 @@ module I2CTest1(
 				end
 				
 				if(master_state == MASTER_TX_PREP && master_next_state == MASTER_TX_BIT7) begin
-				    master_type_work_reg  <= type_buffer;    //Load start/stop bit.
-					 type_buffer           <= 2'b00;          //Clear type buffer.
+				    master_type_work_reg  <= type_buffer;//Load start/stop bit.
+					 type_buffer           <= 2'b00;     //Clear type buffer.
                 master_tx_work_reg    <= data_tx_buffer; //Load data to transmit.
                 data_tx_buffer        <= 8'h00;          //Clear data buffer.
 					 tx_valid_work_reg     <= tx_valid_buffer;//Load tx valid bit.

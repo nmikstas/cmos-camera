@@ -103,8 +103,8 @@ module uart(
       .CLKB(clk),                   // Port B Clock
       .DIA(),                       // Port A 8-bit Data Input
       .DIB(din[7:0]),               // Port-B 8-bit Data Input
-		.DIPA(1'b0),                  // Port A 1-bit parity Input
-		.DIPB(1'b0),                  // Port B 1-bit parity Input
+		.DIPA(1'b0),                // Port A 1-bit parity Input
+		.DIPB(1'b0),                // Port B 1-bit parity Input
       .ENA(1'b1),                   // Port A RAM Enable Input
       .ENB(1'b1),                   // Port B RAM Enable Input
       .SSRA(1'b0),                  // Port A Synchronous Set/Reset Input
@@ -130,8 +130,8 @@ module uart(
       .CLKB(clk),                   // Port B Clock
       .DIA(rxreg),                  // Port A 8-bit Data Input
       .DIB(),                       // Port-B 8-bit Data Input
-		.DIPA(1'b0),                  // Port A 1-bit parity Input
-		.DIPB(1'b0),                  // Port B 1-bit parity Input
+		.DIPA(1'b0),                // Port A 1-bit parity Input
+		.DIPB(1'b0),                // Port B 1-bit parity Input
       .ENA(1'b1),                   // Port A RAM Enable Input
       .ENB(1'b1),                   // Port B RAM Enable Input
       .SSRA(1'b0),                  // Port A Synchronous Set/Reset Input
