@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\Xilinx Projects\Camera_Retimed_3\Main.ncd
+OUTFILE=F:\Xilinx Projects\Camera_Retimed_3\Main.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=F:\Xilinx Projects\Camera_Retimed_3
+LICENSE=WebPack
+USER_INFO=179323054_0_0_758
